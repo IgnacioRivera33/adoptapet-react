@@ -1,0 +1,60 @@
+PROMPT 1:
+
+se me presenta una problematica en la que un refugio de animales quiere reemplazar su mural impreso por un directorio digital interactivo de nmascotas en adopcion, y otorga el listado de mascotas y pide una aplicacion web SPA en react, simple ordenada y segura, que permita ver las mascotas, su especie, y resaltar casos de adopcion en urgencia.
+
+entre los siguentes elementos de react, (componente, JSX, Props, Estado, Renderizado de listas, Renderizado condicional) donde exactamente se usan en esta problematica, y porque es cada uno adecuado para su tarea?
+
+RESPUESTA 1:
+Cómo se usan estos conceptos de React en esa app de adopciones
+En este caso, la app puede organizarse así:
+
+un componente principal muestra la lista de mascotas,
+cada mascota se representa con un componente reutilizable,
+los datos llegan mediante props,
+el estado guarda la información que puede cambiar,
+la lista se genera con renderizado de listas,
+y los casos urgentes se resaltan con renderizado condicional.
+
+Concepto	Dónde se usaría en la app	Por qué es adecuado
+Componente	App para la página general, y MascotaCard para cada tarjeta de animal	Permite dividir la interfaz en partes claras, ordenadas y reutilizables.
+JSX	Dentro de cada componente para escribir la estructura visual: nombre, especie, foto y etiqueta de urgencia	Es la forma natural de describir la UI en React, mezclando HTML con JavaScript.
+Props	Pasar datos como nombre, especie, urgente desde App hacia MascotaCard	Es ideal porque los datos fluyen de forma clara y el componente hijo puede mostrarlos sin manejar todo por sí mismo.
+Estado	Guardar la lista de mascotas, o un filtro como “solo urgentes”	Se usa cuando la información debe cambiar durante la interacción del usuario y React debe volver a renderizar la vista.
+Renderizado de listas	Mostrar todas las mascotas con .map()	Es la solución correcta para mostrar colecciones de datos, como una lista de animales en adopción.
+Renderizado condicional	Mostrar un badge “Urgente” o un mensaje como “No hay mascotas disponibles”	Sirve para cambiar la UI según una condición, por ejemplo si una mascota necesita adopción inmediata.
+
+function App() {
+  const [mascotas, setMascotas] = useState([...]);
+
+  return (
+    <div>
+      {mascotas.map(mascota => (
+        <MascotaCard
+          key={mascota.id}
+          nombre={mascota.nombre}
+          especie={mascota.especie}
+          urgente={mascota.urgente}
+        />
+      ))}
+    </div>
+  );
+}
+
+function MascotaCard({ nombre, especie, urgente }) {
+  return (
+    <div>
+      <h3>{nombre}</h3>
+      <p>{especie}</p>
+      {urgente && <span>Adopción urgente</span>}
+    </div>
+  );
+}
+
+Resumen corto
+
+El componente organiza la app.
+JSX define cómo se ve.
+Props envían datos.
+Estado maneja información dinámica.
+Renderizado de listas muestra todas las mascotas.
+Renderizado condicional resalta las urgencias.
