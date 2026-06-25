@@ -112,3 +112,29 @@ Ejecuté la compilación y el resultado fue exitoso:
 Comando: npm run build
 Estado: compilación correcta con Vite
 Si quieres, el siguiente paso puede ser resaltar visualmente las mascotas con adopción urgente.
+
+PROMPT 4:
+Ahora necesito que Filtro.Especie.jsx se cree con botones o un selector para filtrar los animales por su especie, si el archivo ya esta creado solo poblalo. En app.jsx usa useState para guardar el filtro seleccionado y un campo de busqueda por nombre, aplica ambos filtros sobre el array antes de pasarlos a ListaMascotas. Finalmente usa un renderizado condicional para mostrar el mensaje: "No hay mascotas que coincidan" en caso de que el resultado quede vacio.
+
+Asegura que el campo de busqueda sea un componente controlado y que se valide y normalice el texto de busqueda recortando espacios y limitando el largo, para asi no confiar ciegamente en la entrada del usuario.
+
+RESPUESTA 4:
+Se implementó el filtro y la búsqueda en la app:
+
+components/Filtro.Especie.jsx ahora incluye:
+
+un campo de búsqueda controlado,
+botones o selector para filtrar por especie,
+límite de largo en la entrada y normalización del texto recortando espacios.
+src/App.jsx ahora:
+
+usa useState para guardar el filtro de especie y la búsqueda,
+aplica ambos filtros sobre el array antes de enviarlo a components/Lista.Mascotas.jsx,
+muestra el mensaje “No hay mascotas que coincidan” cuando el resultado queda vacío.
+✅ Verificación
+Ejecuté la compilación y el proyecto quedó correcto:
+
+Comando: npm run build
+Resultado: compilación exitosa con Vite
+
+PROMPT 5:
