@@ -8,7 +8,7 @@ Por que es adecuado: Es la forma natural de describir la UI en react, mezclando 
 
 Props
 Donde se usaria: Permiten pasar datos desde app hacia MascotaCard
-Por que es adecuado: Es ideal porque los datos fluyen de forma clara y el componente hijo puede mostrarlos
+Por que es adecuado: Es ideal porque los datos fluyen de forma clara y el componente hijo puede mostrarlos sin manejar todo por si mismo.
 
 Estado
 Donde se usaria: Guardar la lista de mascotas o un filtro como "solo urgentes"
@@ -21,3 +21,10 @@ Por que es adecuado: Es la solucion para mostrar colleciones de datos como este 
 Renderizado condicional
 Donde se usaria: Al mostrar un badge urgente o un mensaje de advertencia
 Por que es adecuado: Porque permite cambiar la UI segun una condicion.
+
+Preguntas:
+
+1. Que ventaja tiene dividir el directorio en componentes en lugar de escribir todo en un solo archivo?
+Permite que la aplicación tenga una organización clara, ordenada y tambien reutilizable.
+2. Que diferencia hay entre props y estado en tu solucion? Da un ejemplo concreto de cada uno tomado de esta aplicación
+Props permite hacer que los datos fluyan de forma clara y que se muestren sin complicaciones, mientras que estado guarda listas de mascotas o filtros, y permite el manejo de informacion dinamica y en constante cambio.
