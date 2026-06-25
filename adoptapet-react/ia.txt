@@ -89,6 +89,8 @@ Comando: npm run build
 Resultado: build exitoso con Vite
 Si quieres, en el siguiente paso puedo ayudarte a agregar una imagen por mascota o hacer que la tarjeta se vea más parecida a un directorio de adopción
 
+La sugerencia fue util porque: se logro la recepcion de datos en props, y la informacion se logra ver de manera visual y ordenada. Ademas se logro la creacion de tags para cada animal con sus colores respectivos.
+
 PROMPT 3:
 Ahora se necesita crear ListaMascotas (nuevamente, archivo ya creado)
 
@@ -112,6 +114,9 @@ Ejecuté la compilación y el resultado fue exitoso:
 Comando: npm run build
 Estado: compilación correcta con Vite
 Si quieres, el siguiente paso puede ser resaltar visualmente las mascotas con adopción urgente.
+
+La sugerencia fue util porque: se logro corregir errores que habian aparecido en algunas lineas de codigo cuando se creo el componente Mascotas.Card
+Los datos importados si pasan desde data/mascotas.js
 
 PROMPT 4:
 Ahora necesito que Filtro.Especie.jsx se cree con botones o un selector para filtrar los animales por su especie, si el archivo ya esta creado solo poblalo. En app.jsx usa useState para guardar el filtro seleccionado y un campo de busqueda por nombre, aplica ambos filtros sobre el array antes de pasarlos a ListaMascotas. Finalmente usa un renderizado condicional para mostrar el mensaje: "No hay mascotas que coincidan" en caso de que el resultado quede vacio.
@@ -137,7 +142,22 @@ Ejecuté la compilación y el proyecto quedó correcto:
 Comando: npm run build
 Resultado: compilación exitosa con Vite
 
+la sugerencia fue util porque: se agrego una funcion que permitia filtrar por especies, fue confirmada y funciona correctamente.
+
 PROMPT 5:
 Finalmente se necesitan resaltar visualmente los elementos con el valor adopcionUrgente: true, Agrega un contador que permita ver cuantas mascotas necesitan una adopcion urgente, Y finalmente verifica que toda la app corra sin errores o warnings en la consola, en caso de que haya un warning, soluciona el error.
 
 RESPUESTA 5:
+Se agregaron los cambios finales para destacar las mascotas con adopción urgente y mostrar un contador visible:
+
+components/Mascotas.Card.jsx ahora resalta visualmente las tarjetas cuando la mascota tiene adopcionUrgente en true.
+src/App.jsx ahora muestra un contador de cuántas mascotas necesitan adopción urgente.
+La app sigue compilando correctamente con Vite.
+✅ Verificación
+Ejecuté la compilación y el resultado fue exitoso:
+
+La sugerencia fue util porque: la aplicacion corre con exito, y se corrigieron multiples errores.
+
+Comando: npm run build
+Estado: compilación correcta sin errores
+No se detectaron warnings en la compilación ni errores de React en esta verificación.
