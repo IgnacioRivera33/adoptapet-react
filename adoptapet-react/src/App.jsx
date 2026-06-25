@@ -1,5 +1,6 @@
 import './App.css'
-import MascotaCard from '../components/Mascotas.Card'
+import ListaMascotas from '../components/Lista.Mascotas'
+import { mascotas } from '../data/mascotas'
 
 function App() {
   return (
@@ -9,23 +10,7 @@ function App() {
         Directorio digital interactivo del refugio
       </p>
 
-      <MascotaCard
-        nombre="Luna"
-        raza="Mestiza"
-        edad="2 años"
-        especie="gato"
-        descripcion="Gata tranquila, sociable y muy cariñosa."
-        caracteristicas={['Juguetona', 'Se lleva bien con niños', 'Muy dulce']}
-      />
-
-      <MascotaCard
-        nombre="Rocky"
-        raza="Labrador"
-        edad="4 años"
-        especie="perro"
-        descripcion="Perro activo, obediente y excelente compañero para familias."
-        caracteristicas={['Energético', 'Le gusta correr', 'Entrenado']}
-      />
+      <ListaMascotas mascotas={mascotas} />
     </main>
   )
 }

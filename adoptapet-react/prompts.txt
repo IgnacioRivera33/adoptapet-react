@@ -59,6 +59,10 @@ Estado maneja información dinámica.
 Renderizado de listas muestra todas las mascotas.
 Renderizado condicional resalta las urgencias.
 
+La sugerencia fue util porque: Me dio resumenes de cada uno de los conceptos de REACT y como se usan en este caso correctamente.
+
+Que modificaste: Redacte y resumi las respuestas otorgadas por la IA de manera que pudiese entenderlo con mis propias palabras.
+
 
 PROMPT 2:
 Ahora necesito la creacion de Mascotas.Card.jsx, dentro de este archivo (ya creado) necesito que se agregue lo siguente:
@@ -84,3 +88,27 @@ Ejecuté la compilación y el proyecto respondió correctamente:
 Comando: npm run build
 Resultado: build exitoso con Vite
 Si quieres, en el siguiente paso puedo ayudarte a agregar una imagen por mascota o hacer que la tarjeta se vea más parecida a un directorio de adopción
+
+PROMPT 3:
+Ahora se necesita crear ListaMascotas (nuevamente, archivo ya creado)
+
+Se requiere que ListaMascotas.jsx reciba el array de mascotas por props, que se recorra el array con .map() y se renderize un MascotaCard por cada mascota, que se asigne correctamente la prop key usando el id de cada elemento (sin usar el indice de array) y que en App.jsx se renderize ListaMascota, pasandole los datos importados
+
+Antes de esto, verifica si hay algunos errores presentes en la anterior creacion de Mascotas.Card
+
+RESPUESTA 3:
+Se revisó la implementación anterior y no se encontraron errores en components/Mascotas.Card.jsx ni en src/App.jsx.
+
+Ahora quedó creada la lista en components/Lista.Mascotas.jsx con lo solicitado:
+
+Recibe el array de mascotas por props.
+Recorre el array con .map().
+Renderiza un componente MascotaCard por cada mascota.
+Usa correctamente la prop key con el id de cada elemento, sin usar el índice.
+En src/App.jsx se renderiza ListaMascotas pasando los datos importados desde data/mascotas.js.
+✅ Verificación
+Ejecuté la compilación y el resultado fue exitoso:
+
+Comando: npm run build
+Estado: compilación correcta con Vite
+Si quieres, el siguiente paso puede ser resaltar visualmente las mascotas con adopción urgente.
