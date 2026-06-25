@@ -14,6 +14,8 @@ function App() {
     setBusqueda(textoNormalizado)
   }
 
+  const mascotasUrgentes = mascotas.filter((mascota) => mascota.adopcionUrgente)
+
   const mascotasFiltradas = mascotas.filter((mascota) => {
     const coincideEspecie =
       especieSeleccionada === 'Todos' ||
@@ -29,8 +31,11 @@ function App() {
   return (
     <main style={{ maxWidth: '900px', margin: '0 auto', padding: '24px' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '8px' }}>Mascotas en adopción</h1>
-      <p style={{ textAlign: 'center', color: '#666', marginBottom: '24px' }}>
+      <p style={{ textAlign: 'center', color: '#666', marginBottom: '12px' }}>
         Directorio digital interactivo del refugio
+      </p>
+      <p style={{ textAlign: 'center', color: '#b91c1c', fontWeight: '700', marginBottom: '24px' }}>
+        Mascotas en adopción urgente: {mascotasUrgentes.length}
       </p>
 
       <FiltroEspecie

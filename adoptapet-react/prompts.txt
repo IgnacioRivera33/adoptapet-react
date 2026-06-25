@@ -138,3 +138,6 @@ Comando: npm run build
 Resultado: compilación exitosa con Vite
 
 PROMPT 5:
+Finalmente se necesitan resaltar visualmente los elementos con el valor adopcionUrgente: true, Agrega un contador que permita ver cuantas mascotas necesitan una adopcion urgente, Y finalmente verifica que toda la app corra sin errores o warnings en la consola, en caso de que haya un warning, soluciona el error.
+
+RESPUESTA 5:

@@ -1,4 +1,4 @@
-function MascotaCard({ nombre, raza, edad, especie, descripcion, caracteristicas }) {
+function MascotaCard({ nombre, raza, edad, especie, descripcion, caracteristicas, adopcionUrgente }) {
   const especieKey = (especie || '').toLowerCase()
 
   const estilosPorEspecie = {
@@ -35,15 +35,33 @@ function MascotaCard({ nombre, raza, edad, especie, descripcion, caracteristicas
   return (
     <article
       style={{
-        border: `2px solid ${estilo.borde}`,
+        border: `2px solid ${adopcionUrgente ? '#dc2626' : estilo.borde}`,
         borderRadius: '16px',
         padding: '16px',
-        boxShadow: '0 8px 20px rgba(0,0,0,0.08)',
-        background: '#fff',
+        boxShadow: adopcionUrgente ? '0 10px 24px rgba(220, 38, 38, 0.2)' : '0 8px 20px rgba(0,0,0,0.08)',
+        background: adopcionUrgente ? '#fff7ed' : '#fff',
         maxWidth: '360px',
-        margin: '16px auto'
+        margin: '16px auto',
+        position: 'relative'
       }}
     >
+      {adopcionUrgente && (
+        <span
+          style={{
+            position: 'absolute',
+            top: '12px',
+            right: '12px',
+            background: '#dc2626',
+            color: '#fff',
+            padding: '4px 8px',
+            borderRadius: '999px',
+            fontSize: '0.75rem',
+            fontWeight: '700'
+          }}
+        >
+          Adopción urgente
+        </span>
+      )}
       <div
         style={{
           display: 'flex',
