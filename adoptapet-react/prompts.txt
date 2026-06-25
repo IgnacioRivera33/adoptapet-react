@@ -58,3 +58,29 @@ Props envían datos.
 Estado maneja información dinámica.
 Renderizado de listas muestra todas las mascotas.
 Renderizado condicional resalta las urgencias.
+
+
+PROMPT 2:
+Ahora necesito la creacion de Mascotas.Card.jsx, dentro de este archivo (ya creado) necesito que se agregue lo siguente:
+
+- El componente debe recibir por props, nombre, raza, edad, especie, descripcion, caracteristicas.
+
+- Debe mostrar la informacion de forma visual y ordenada.
+
+- Debe aplicar un estilo diferenciado para cada especie, preferiblemente un color o una etiqueta distinta para cada uno, ejemplo (perro, gato)
+
+RESPUESTA 2:
+
+He creado y dejado listo el componente en components/Mascotas.Card.jsx con lo que pediste:
+
+Recibe por props: nombre, raza, edad, especie, descripcion y caracteristicas.
+Muestra la información de forma visual y ordenada.
+Aplica estilos diferenciados según la especie, con etiquetas y colores distintos para perro y gato, y un estilo general para otras especies.
+También lo integré en src/App.jsx para que se vea en la vista principal.
+
+✅ Verificación
+Ejecuté la compilación y el proyecto respondió correctamente:
+
+Comando: npm run build
+Resultado: build exitoso con Vite
+Si quieres, en el siguiente paso puedo ayudarte a agregar una imagen por mascota o hacer que la tarjeta se vea más parecida a un directorio de adopción
